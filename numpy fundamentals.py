@@ -85,3 +85,57 @@ print("size:", arr3.size, "# Total number of elements")
 print("dtype:", arr3.dtype, "# Data type of elements")
 # itemsize: Size of float32 is 4 bytes
 print("itemsize:", arr3.itemsize, "# Size of each element in bytes")
+
+
+# changing datatype
+
+import numpy as np
+
+# Original array with float64 dtype
+a3 = np.array([[[0.9, 1.2], [2.5, 3.7]], [[4.0, 5.0], [6.0, 7.0]]], dtype=np.float64)
+print("Original array:")
+print(a3)
+print("Original dtype:", a3.dtype)
+
+# Change dtype to int32
+a3_int = a3.astype(np.int32)
+print("\nArray after astype(np.int32):")
+print(a3_int)
+print("New dtype:", a3_int.dtype)
+
+'''
+Notice that 0.9 → 0, 1.2 → 1, 2.5 → 2, and 3.7 → 3 because decimals are truncated when converting to int32.
+Summary
+The code a3.astype(np.int32) converts the NumPy 
+array a3 to a new array with int32 data type.
+Changing data types with astype is about converting the storage format 
+of array elements, which can optimize memory, ensure compatibility, or control precision.
+In the output, the array retains its structure and values 
+(with possible truncation if converting from float), but its dtype is now int32.
+'''
+
+
+# numpy operaton
+
+a1 = np.arange(12).reshape(3,4)
+a2 = np.arange(12,24).reshape(3,4)
+sum = a1 * 2
+print(sum)
+print(a1)
+
+# Create two arrays
+a = np.array([1, 2, 3])
+b = np.array([4, 5, 6])
+
+# Element-wise operations
+add = a + b  # or np.add(a, b)
+subtract = a - b  # or np.subtract(a, b)
+multiply = a * b  # or np.multiply(a, b)
+divide = a / b  # or np.divide(a, b)
+power = a ** 2  # or np.power(a, 2)
+
+print("Addition:", add)
+print("Subtraction:", subtract)
+print("Multiplication:", multiply)
+print("Division:", divide)
+print("Power (a^2):", power)
