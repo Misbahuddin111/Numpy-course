@@ -139,3 +139,55 @@ print("Subtraction:", subtract)
 print("Multiplication:", multiply)
 print("Division:", divide)
 print("Power (a^2):", power)
+
+# numpy function 
+
+
+import numpy as np
+
+
+a1 = np.arange(1,16).reshape(3,5)
+
+print(a1)
+print(np.min(a1))         
+print(np.min(a1, axis=0)) 
+# in numpy 0 -> col and 1 -> rows
+
+print(np.max(a1))
+print(np.max(a1, axis=1))
+
+# indexing and slicing
+import numpy as np
+
+# 1D array
+arr_1d = np.array([10, 20, 30, 40, 50])
+
+
+# 3D array (2x2x3)
+arr_3d = np.array([[[1, 2, 3],
+                    [4, 5, 6]],
+                   [[7, 8, 9],
+                    [10, 11, 12]]])
+
+# indexing 
+print(arr_1d[-1])
+# slicing
+print(arr_1d[0::3])
+# reverse array
+print(arr_1d[::-1])
+
+
+# 2D array
+# 2D array (3x4 matrix)
+arr_2d = np.array([[1, 2, 3, 4],
+                   [5, 6, 7, 8],
+                   [9, 10, 11, 12]])
+
+print(arr_2d[0, 0])  # Output: 1 (element at row 0, column 0)
+print(arr_2d[2, -1])  # Output: 12 (element at row 2, last column)
+print(arr_2d[2,1])
+print(arr_2d[1,2])
+
+# slicing
+print(arr_2d[1, :])  # Output: [5, 6, 7, 8] (all columns of row 1)
+print(arr_2d[:, 2])  # Output: [3, 7, 11] (all rows of column 2)
