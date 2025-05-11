@@ -194,3 +194,15 @@ print(arr_2d[1, :])  # Output: [5, 6, 7, 8] (all columns of row 1)
 print(arr_2d[:, 2])  # Output: [3, 7, 11] (all rows of column 2)
 print(arr_2d[0:2, 1:3])  # Output: [[2, 3], [6, 7]] (rows 0-1, columns 1-2)
 print(arr_2d[::2, ::2])  # Output: [[1, 3], [9, 11]] (every second row and column)
+
+# transpose
+arrr = np.arange(1,13).reshape(3,4)
+print(arrr)
+# # Transpose
+# np.transpose(a2)
+# a2.T
+print(np.transpose(arrr))
+
+# ravel ( convert multi dimensions into signal array)
+# ravel
+print(arrr.ravel())
