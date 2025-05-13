@@ -206,3 +206,13 @@ print(np.transpose(arrr))
 # ravel ( convert multi dimensions into signal array)
 # ravel
 print(arrr.ravel())
+
+# shape in numpy
+arraay = np.array([[1,3], [2,4],[5,6]])
+print(arraay)
+print(arraay.shape)
+
+# Create a 3D array
+arr = np.array([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])
+print("Array:\n", arr)
+print("Shape:", arr.shape)
