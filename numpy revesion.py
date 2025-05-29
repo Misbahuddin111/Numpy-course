@@ -83,7 +83,7 @@ e = np.array([1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6])
 print(np.unique(e))
 
 
-arr = np.arange(1, 25)
+arr = np.arange(25)
 print("\nOriginal array:", arr)
 print("Original shape:", arr.shape)
 print("Shape after expand_dims:", np.expand_dims(arr, axis=1).shape)  # Add column dimension
@@ -97,3 +97,13 @@ print("Replace even numbers with 0:", np.where(arr % 2 == 0, 0, arr))  # Replace
 
 print("\nIndex of maximum value:", np.argmax(arr))
 print(f"Index of minimum value: {np.argmin(arr)}")
+print(np.where(arr % 2 == 0))
+print(np.where(arr > 19 , 2,arr))
+
+
+arr = np.array([1, 2, 3, 4])
+cumsum = np.cumsum(arr)  # Returns [1, 3, 6, 10]
+arr_2d = np.array([[1, 2], [3, 4]])
+cumsum_rows = np.cumsum(arr_2d, axis=1)  # Returns [[1, 3], [3, 7]]
+
+# Useful for running totals, time series analysis, or computing prefix sums
